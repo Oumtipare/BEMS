@@ -20,6 +20,7 @@ public class BankEmployeeServiceImpl implements BankEmployeeService {
 
     @Override
     public BankEmployee getEmployeeById(int id) {
+    	System.out.println("This is the employee details");
         BankEmployee emp = EmployeeRepository.get(id);
         if (emp == null) {
             throw new EmployeeNotFoundException(id);
